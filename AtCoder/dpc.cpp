@@ -29,6 +29,7 @@ int main() {
         b = cb;
         c = cc;
     }
+    
     cout << max(a,max(b,c)) << endl;
     return 0;
 }

@@ -17,7 +17,7 @@ ll val[MAXN];
 
 int main() {
     cin.tie(0)->sync_with_stdio(0);
-    int n, w, iw, iv; cin >> n >> w; // change to ll if overflowing
+    int n, w, iw, iv; cin >> n >> w;
     f(i,0,n){
         cin >> iw >> iv;
         fr(j,w,iw-1){

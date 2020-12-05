@@ -21,7 +21,7 @@ int main() {
     ms(c,0x3f);
     c[1] = 0;
     f(i,2,n+1){
-        f(j,max(i-k,1),i){
+        f(j,max(i-k,1),i){  // try jump to every rock in range, storing minimum
             c[i] = min(c[i], c[j] + abs(h[j]-h[i]));
         }
     }

@@ -20,6 +20,7 @@ int dp[MAXN];
 
 int main() {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(0);
+    
     int n, mw, w, v, mv = 0; cin >> n >> mw;
     ms(dp,0x3f);
     dp[0] = 0;

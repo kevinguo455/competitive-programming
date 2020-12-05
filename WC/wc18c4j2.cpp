@@ -23,6 +23,7 @@ const int MOD = 1e9+7, INF = 0x3f3f3f3f, MAXN = 1e5+5;
 
 int main() {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(0);
+    
     int n, d, hp = 50, c = 0; cin >> n;
     f(i,0,n){
         cin >> d;
@@ -34,5 +35,6 @@ int main() {
         }
     }
     cout << c << endl;
+    
     return 0;
 }

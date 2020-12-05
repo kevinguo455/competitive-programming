@@ -18,7 +18,7 @@ int main() {
     f(i,1,n+1){
         cin >> h[i];
     }
-    c[2] = abs(h[1]-h[2]);
+    c[2] = abs(h[1]-h[2]);  // dp transition: minimum of (jump from two rocks away), (jump from one rock away)
     f(i,3,n+1){
         c[i] = min(c[i-1] + abs(h[i-1]-h[i]), c[i-2] + abs(h[i-2]-h[i]));
     }

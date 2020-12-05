@@ -29,7 +29,6 @@ int main() {
         dp[i-1][i] = max(dp[i-1][i-1], dp[i][i]);
         s += dp[i][i];
     }
-
     f(l,2,n){
         f(a,0,n-l){
             dp[a][a+l] = max(dp[a][a] + min(dp[a+1][a+l-1], dp[a+2][a+l]), dp[a+l][a+l] + min(dp[a][a+l-2], dp[a+1][a+l-1]));

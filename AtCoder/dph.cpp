@@ -14,6 +14,7 @@ int dist[MAXN][MAXN];
 
 int main() {
     cin.tie(0)->sync_with_stdio(0);
+
     int r, c; cin >> r >> c;
     f(i,1,r+1){
         cin >> grid[i];
@@ -26,5 +27,6 @@ int main() {
         }
     }
     cout << dist[r][c] << endl;
+    
     return 0;
 }

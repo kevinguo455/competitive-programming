@@ -28,7 +28,7 @@ int main() {
     f(i,0,c){
         cin >> x;
         f(j,0,d-x+1){
-            if(dp[j] != INF) dp[j+x] = min(dp[j+x], dp[j]+1);
+            if(dp[j] != INF) dp[j+x] = min(dp[j+x], dp[j]+1);   // left-to-right dp transition to reuse clubs
         }
     }
     if (dp[d] == INF) cout << "Roberta acknowledges defeat." << endl;

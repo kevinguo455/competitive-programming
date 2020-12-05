@@ -33,3 +33,6 @@
 
 # VS Code
 *.code-workspace
+
+# Java
+*.class

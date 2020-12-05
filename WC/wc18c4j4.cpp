@@ -29,6 +29,7 @@ char inc(char c, int n) {
 
 int main() {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(0);
+    
     int n, k; cin >> n >> k;
     if (k < n+1 || k > 14*n+1) {
         cout << "Impossible" << endl;
