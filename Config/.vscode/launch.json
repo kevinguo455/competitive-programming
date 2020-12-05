@@ -5,7 +5,7 @@
             "name": "CodeLens (Launch)",
             "request": "launch",
             "mainClass": "${fileBasenameNoExtension}",
-            "projectName": "${relativeFileDirname}"
+            "projectName": ""
         },
         {
             "name": "g++.exe - Build and debug active file",
