@@ -1,4 +1,10 @@
-// https://dmoj.ca/problem/dmopc20c1p2
+/* 
+DMOPC '20 Contest 1 P2 - Victor's Dilemma
+Key Concepts: Implementation (intended solution - data structures, prefix sum array)
+Solution by Kevin Guo
+https://dmoj.ca/problem/dmopc20c1p2
+*/
+
 #include <iostream>
 #include <vector>
 #include <math.h>

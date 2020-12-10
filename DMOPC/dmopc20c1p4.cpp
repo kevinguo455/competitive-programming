@@ -1,4 +1,10 @@
-// https://dmoj.ca/problem/dmopc20c1p4
+/* 
+DMOPC '20 Contest 1 P4 - Victor Makes Bank
+Key Concepts: Matrix Multiplication, Binary Exponentiation
+Solution by Kevin Guo
+https://dmoj.ca/problem/dmopc20c1p4
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 

@@ -1,7 +1,8 @@
 /* 
-Solution to CCC '05 Junior P3 - Returning Home by Kevin Guo
-Key Concepts: Implementation, Stack
-https://dmoj.ca/problem/ccc05j3
+DMOPC '20 Contest 2 P2 - Lousy Christmas Presents
+Key Concepts: Greedy Algorithms
+Solution by Kevin Guo
+https://dmoj.ca/problem/dmopc20c2p2
 */
 
 #include <bits/stdc++.h>
@@ -24,24 +25,29 @@ typedef pair<ll, ll> pll;
 typedef vector<int> vi;
 typedef vector<ll> vll;
 typedef priority_queue<int> pqi;
-const int MOD = 1e9+7, INF = 0x3f3f3f3f, MAXN = 1e5+5; 
+const int MOD = 1e9+7, INF = 0x3f3f3f3f, MAXN = 1e6+5; 
+
+int first[MAXN];
+int last[MAXN];
 
 int main() {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(0);
 
-    stack<string> v;
-    string s; cin >> s;
-    while (s != "SCHOOL") {
-        v.push(s);
-        cin >> s;
+    int n, m; cin >> n >> m;
+    ms(first, INF);
+    int x;
+    f(i,0,n) {
+        cin >> x;
+        first[x] = min(first[x],i);
+        last[x] = max(last[x],i);
     }
-    while (!v.empty()) {
-        s = v.top();
-        v.pop();
-        if (s == "L") cout << "Turn RIGHT ";
-        else if (s == "R") cout << "Turn LEFT ";
-        else cout << "onto " << s << " street." << endl;
+
+    int a, b, c = 0;
+    f(i,0,m){
+        cin >> a >> b;
+        c = max(c, last[b] - first[a] + 1);
     }
-    cout << "into your HOME." << endl;
+    cout << c << endl;
+
     return 0;
 }

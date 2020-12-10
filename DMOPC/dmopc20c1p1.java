@@ -1,4 +1,10 @@
-// https://dmoj.ca/problem/dmopc20c1p1
+/* 
+DMOPC '20 Contest 1 P1 - Victor Gets Quizzed
+Key Concepts: Implementation, String Algorithms
+Solution by Kevin Guo
+https://dmoj.ca/problem/dmopc20c1p1
+*/
+
 import java.util.*;
 
 public class dmopc20c1p1 {	

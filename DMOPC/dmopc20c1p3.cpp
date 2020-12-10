@@ -1,4 +1,10 @@
-// https://dmoj.ca/problem/dmopc20c1p3
+/* 
+DMOPC '20 Contest 1 P3 - Victor's Algorithm
+Key Concepts: Greedy Algorithm
+Solution by Kevin Guo
+https://dmoj.ca/problem/dmopc20c1p3
+*/
+
 #include <iostream>
 #include <vector>
 #include <math.h>

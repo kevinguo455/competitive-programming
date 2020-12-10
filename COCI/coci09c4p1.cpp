@@ -1,4 +1,9 @@
-// https://dmoj.ca/problem/coci09c4p1
+/*
+Solution to COCI '09 Contest 4 Problem 1 - Autori
+Key Concepts: Implementation
+Solution by Kevin Guo
+https://dmoj.ca/problem/coci09c4p1
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
