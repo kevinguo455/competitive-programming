@@ -1,7 +1,7 @@
 /*
-
-Key Concepts: 
-https://dmoj.ca/problem/
+WC '17 Contest 1 J1 - Canadian Accent
+Key Concepts: Implementation
+https://dmoj.ca/problem/wc17c1j1
 Solution by Kevin Guo
 */
 #include <bits/stdc++.h>
@@ -16,7 +16,6 @@ using namespace std;
 #define vr(v) reverse(v.begin(), v.end())
 #define fi first
 #define se second
-#define fio cin.tie(0); cout.tie(0); ios::sync_with_stdio(0)
 typedef unsigned int ui;
 typedef long long ll;
 typedef unsigned long long ull;
@@ -29,6 +28,9 @@ const int MOD = 1e9+7, INF = 0x3f3f3f3f, MAXN = 1e5+5;
 
 int main() {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(0);
+
+    string s; cin >> s;
+    cout << s << ", eh" << endl;
 
     return 0;
 }

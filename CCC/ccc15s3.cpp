@@ -1,4 +1,9 @@
-// https://dmoj.ca/problem/ccc15s3
+/*
+CCC '15 S3 - Gates
+Key Concepts: Data Structures (sets)
+https://dmoj.ca/problem/ccc15s3
+Solution by Kevin Guo
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
