@@ -1,4 +1,9 @@
-// https://dmoj.ca/problem/dpd
+/*
+AtCoder Educational DP Contest Problem D - Knapsack 1
+Key Concepts: Dynamic Programming (0-1 Knapsack)
+https://dmoj.ca/problem/dpd
+Solution by Kevin Guo
+*/
 #include <bits/stdc++.h>
 using namespace std;
 

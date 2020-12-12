@@ -1,4 +1,9 @@
-// https://dmoj.ca/problem/dpc
+/*
+AtCoder Educational DP Contest Problem C - Vacation
+Key Concepts: Dynamic Programming 
+https://dmoj.ca/problem/dpc
+Solution by Kevin Guo
+*/
 #include <bits/stdc++.h>
 using namespace std;
 

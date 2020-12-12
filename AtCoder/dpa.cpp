@@ -1,4 +1,9 @@
-// https://dmoj.ca/problem/dpa
+/*
+AtCoder Educational DP Contest Problem A - Frog 1
+Key Concepts: Dynamic Programming 
+https://dmoj.ca/problem/dpa
+Solution by Kevin Guo
+*/
 #include <bits/stdc++.h>
 using namespace std;
 

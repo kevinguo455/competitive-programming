@@ -1,4 +1,9 @@
-// https://dmoj.ca/problem/dpl
+/*
+AtCoder Educational DP Contest Problem L - Deque
+Key Concepts: Dynamic Programming, Greedy Algorithms (turn-based)
+https://dmoj.ca/problem/dpl
+Solution by Kevin Guo
+*/
 #include <bits/stdc++.h>
 using namespace std;
 

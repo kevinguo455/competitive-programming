@@ -1,4 +1,9 @@
-// https://dmoj.ca/problem/dph
+/*
+AtCoder Educational DP Contest Problem H - Grid 1
+Key Concepts: Dynamic Programming (Gridwalk)
+https://dmoj.ca/problem/dph
+Solution by Kevin Guo
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
