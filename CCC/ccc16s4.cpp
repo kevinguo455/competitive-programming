@@ -37,32 +37,27 @@ int sum(int l, int r){    // sum inclusive from l to r
 int main() {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(0);
     // init
-    int n; cin >> n;
+    int n, c = 0; cin >> n;
     f(i,0,n){
         cin >> psa[i+1];
         psa[i+1] += psa[i];
         dp[i][i] = 1;
+        c = max(c, sum(i,i)); 
     }
     // interval dp
-    f(s,0,n){                   // size
-        f(l,0,n-s){             // left bound = l, right bound = l+s (inclusive)
-            int a = l, b = l+s; // two ptrs: left divider a, right divider b
+    f(s,0,n){                           // size
+        f(l,0,n-s){                     // left bound = l, right bound = l+s (inclusive)
+            int a = l, b = l+s, r = l+s; // two ptrs: left divider a, right divider b
             while (a < b) {
-                if (sum(l,a) < sum(b,l+s)) a++;
-                else if (sum(l,a) > sum(b,l+s)) b--;
-                else if ((b - a == 1 && dp[l][a] && dp[b][l+s]) || (dp[l][a] && dp[a+1][b-1] && dp[b][l+s])) {
-                    dp[l][l+s] = 1;
+                if (sum(l,a) < sum(b,r)) a++;
+                else if (sum(l,a) > sum(b,r)) b--;
+                else if ((b - a == 1 && dp[l][a] && dp[b][r]) || (dp[l][a] && dp[a+1][b-1] && dp[b][r])) {
+                    dp[l][r] = 1;
+                    c = max(c, sum(l,r)); // track max
                     a++;
                 }
                 else a++;
             }
-        }
-    }
-    // determine max
-    int c = 0;
-    f(l,0,n){
-        f(r,l,n){
-            if (dp[l][r]) c = max(c, sum(l,r));
         }
     }
     cout << c << endl;
