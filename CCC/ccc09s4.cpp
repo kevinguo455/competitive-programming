@@ -1,4 +1,9 @@
-// https://dmoj.ca/problem/ccc09s4
+/*
+CCC '09 S4 - Shop and Ship
+Key Concepts: Graph Theory (Dijkstra's)
+https://dmoj.ca/problem/ccc09s4
+Solution by Kevin Guo
+*/
 #include <bits/stdc++.h>
 using namespace std;
 

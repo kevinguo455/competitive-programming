@@ -12,6 +12,7 @@ using namespace std;
 #define vr(v) reverse(v.begin(), v.end())
 #define fi first
 #define se second
+#define fio cin.tie(0); cout.tie(0); ios::sync_with_stdio(0)
 typedef unsigned int ui;
 typedef long long ll;
 typedef unsigned long long ull;

@@ -28,7 +28,7 @@ typedef priority_queue<int> pqi;
 const int MOD = 1e9+7, INF = 0x3f3f3f3f, MAXN = 1e5+5; 
 
 int main() {
-    cin.tie(0); cout.tie(0); ios::sync_with_stdio(0);
+    fio;
 
     return 0;
 }
