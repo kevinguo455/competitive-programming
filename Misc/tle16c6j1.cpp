@@ -31,26 +31,22 @@ int main() {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(0);
 
     int n, m, a; cin >> n >> m >> a;
-    int x, q;
+    int x = 0, q;
     f(i,0,a) {
         n += x;
         cin >> x >> q;
         n -= x;
-        if (n < 0) {
-            cout << "The printer melts at " << x+n+1 << " second(s)." << endl;
-            return 0;
-        }
         n += q;
-        if (n == 0) {
-            cout << "The printer melts at " << x+n << " second(s)." << endl;
+        if (n < q) {
+            cout << "The printer melts at " << x+n-q+1 << " second(s)." << endl;
             return 0;
         }
-        if (n >= m) {
+        if (n > m) {
             cout << "The printer jams at " << x << " second(s)." << endl;
             return 0;
         }
     }
-    cout << "This poor printer is... still fine!?" << endl;
+    cout << "The printer melts at " << x+n+1 << " second(s)." << endl;
 
     return 0;
 }
