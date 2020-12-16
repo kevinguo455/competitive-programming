@@ -1,4 +1,9 @@
-// https://dmoj.ca/problem/dmopc13c3p3
+/*
+DMOPC '13 Contest 3 P3 - Crossing Field
+Key Concepts: Graph Theory (DFS/BFS)
+https://dmoj.ca/problem/dmopc13c3p3
+Solution by Kevin Guo
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
