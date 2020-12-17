@@ -1,4 +1,9 @@
-// https://dmoj.ca/problem/ccc03s3
+/*
+CCC '03 S3 - Floor Plan
+Key Concepts: Graph Theory (BFS/DFS, Components)
+https://dmoj.ca/problem/ccc03s3
+Solution by Kevin Guo
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
