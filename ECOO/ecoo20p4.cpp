@@ -34,9 +34,9 @@ int main() {
     f(casen,0,cases){
         int lines; cin >> lines;
         
-        map<string, pll> functions;         // all functions that have been defined
-        stack<pair<string, pll>> defining;  // all functions currently being defined (nested definitions)
-        ll a = 1, b = 0;                    // all functions can be expressed as (ax + b)
+        unordered_map<string, pll> functions;   // all functions that have been defined
+        stack<pair<string, pll>> defining;      // all functions currently being defined (nested definitions)
+        ll a = 1, b = 0;                        // all functions can be expressed as (ax + b)
 
         f(line,0,lines){
             string s, t; cin >> s;
