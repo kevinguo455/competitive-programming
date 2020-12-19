@@ -1,4 +1,9 @@
-// https://dmoj.ca/problem/dmopc14c3p6
+/*
+DMOPC '14 Contest 3 P6 - Not Enough Time!
+Key Concepts: Dynamic Programming (Knapsack)
+https://dmoj.ca/problem/dmopc14c3p6
+Solution by Kevin Guo
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
