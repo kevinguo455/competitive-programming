@@ -15,12 +15,7 @@ int main() {
     }
     sort(v.begin(), v.end());
 
-    for (int i = 2; i < 6; i++) {
-        if (v[i] != v[6] - v[0] && v[i] != v[6] - v[1] && v[i] != v[0] + v[1]) {
-            cout << v[0] << " " << v[1] << " " << v[i] << "\n";
-            return 0;
-        }
-    }
+    cout << v[0] << " " << v[1] << " " << v[6] - v[1] - v[0] << "\n";
 
     return 0;
 }
