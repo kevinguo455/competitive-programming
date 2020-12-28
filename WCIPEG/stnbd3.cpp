@@ -1,7 +1,7 @@
 /*
-
-Key Concepts: 
-https://dmoj.ca/problem/
+Rinslet Laurenfrost
+Key Concepts: Greedy Algorithms
+https://dmoj.ca/problem/stnbd3
 Solution by Kevin Guo
 */
 #include <bits/stdc++.h>
@@ -25,10 +25,25 @@ typedef pair<ll, ll> pll;
 typedef vector<int> vi;
 typedef vector<ll> vll;
 typedef priority_queue<int> pqi;
-const int MOD = 1e9+7, INF = 0x3f3f3f3f, MAXN = 1e5+5; 
+const int MOD = 1e9+7, INF = 0x3f3f3f3f, MAXN = 26; 
+
+string a, b; 
+int x[MAXN], y[MAXN];
 
 int main() {
     fio;
+
+    cin >> a >> b;
+
+    f(i,0,a.length()) x[a[i]-'a']++;
+    f(i,0,b.length()) y[b[i]-'a']++;
+
+    int c = a.length() + b.length();
+    f(i,0,MAXN) {
+        c -= min(x[i], y[i]) * 2;
+    }
+    
+    cout << c << "\n";
 
     return 0;
 }
