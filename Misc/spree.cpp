@@ -10,7 +10,6 @@ using namespace std;
 int dp[1001];
 
 int main() {
-
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(0);
 
     int n, mw, v, w; cin >> n >> mw;
