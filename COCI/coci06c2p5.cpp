@@ -1,4 +1,9 @@
-// https://dmoj.ca/problem/coci06c2p5
+/*
+COCI '06 Contest 2 #5 Stol
+Key Concepts: Prefix Sum Array
+https://dmoj.ca/problem/coci06c2p5
+Solution by Kevin Guo
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
