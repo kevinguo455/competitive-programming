@@ -1,4 +1,9 @@
-// https://dmoj.ca/problem/ccc07s3
+/*
+CCC '07 S3 - Friends
+Key Concepts: Graph Theory (connectivity)
+https://dmoj.ca/problem/ccc07s3
+Solution by Kevin Guo
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
