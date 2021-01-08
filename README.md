@@ -19,7 +19,6 @@ Unfinished problems:
 -https://dmoj.ca/problem/seed4 (geometry)
 -https://dmoj.ca/problem/seed5 (graphs)
 -https://dmoj.ca/problem/ecoo13r3p4 (dp)
--https://dmoj.ca/problem/year2017p6 (dp)
 -https://dmoj.ca/problem/virtuoso (dp)
 
 
