@@ -27,6 +27,7 @@ const int MOD = 1e9+7, INF = 0x3f3f3f3f, MAXN = 1e5+5;
 struct Edge{int n; bool d;};
 vector<Edge> adj[MAXN];
 pii dist[MAXN];     // {dangerous roads, total roads}
+bool inq[MAXN];
 
 bool cmp(pii a, pii b) {
     if (a.fi == b.fi) return a.se < b.se;
@@ -58,10 +59,14 @@ int main() {
     while (!pq.empty()) {
         int c = pq.top();
         pq.pop();
+        inq[c] = 0;
         for (Edge t:adj[c]) {
             if (cmp({dist[c].fi+t.d, dist[c].se+1}, dist[t.n])) {
                 dist[t.n] = {dist[c].fi+t.d, dist[c].se+1};
-                pq.push(t.n);
+                if (!inq[t.n]) {
+                    pq.push(t.n);
+                    inq[t.n] = 1;
+                }
             }
         }
     }
