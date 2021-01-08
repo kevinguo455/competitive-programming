@@ -1,5 +1,5 @@
 /*
-Christmas Cards
+New Year's 2017 Problem 6 - Christmas Cards
 Key Concepts: Dynamic Programming (knapsack)
 https://dmoj.ca/problem/year2017p6
 Solution by Kevin Guo
