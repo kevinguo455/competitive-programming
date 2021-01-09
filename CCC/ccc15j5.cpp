@@ -1,41 +1,29 @@
-// https://dmoj.ca/problem/ccc15j5
+/*
+CCC '15 J5 - π-day
+Key Concepts: Dynamic Programming
+https://dmoj.ca/problem/ccc15j5
+Solution by Kevin Guo
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
-#define ms(x,a) memset(x,a,sizeof(x))
-#define pb push_back
-#define eb emplace_back
-#define f(i,a,b) for (int i = a; i < b; i++)
-#define fr(i,b,a) for (int i = b; i > a; i--)
-#define vs(v) sort(v.begin(), v.end())
-#define vr(v) reverse(v.begin(), v.end())
-typedef long long ll;
-typedef pair<int, int> pii;
-typedef pair<ll, ll> pll;
-typedef vector<int> vi;
-typedef priority_queue<int> pqi;
-const int MOD = 1e9+7, INF = 0x3f3f3f3f, MAXN = 251;
+const int MAXN = 251;
 
-vector<short> arr[MAXN];
+int dp[MAXN][MAXN];
 
 int main() {
-    cin.tie(0); cout.tie(0); ios::sync_with_stdio(0);
+    cin.tie(0)->sync_with_stdio(0);
     
-    short n, k; cin >> n >> k;
-    short t = n - k;
-    f(i,0,t+1) {
-        arr[i].pb(i);
+    int mn, mk; cin >> mn >> mk;
+    dp[1][1] = 1;
+
+    for (int n = 1; n <= mn; n++) {
+        for (int k = 1; k <= min(mk, n); k++) {
+            dp[n][k] += dp[n-k][k] + dp[n-1][k-1];  // dp[n-k][k] counts solutions that do not include a 1 (subtract 1 from all elements)        
+        }                                           // dp[n-1][k-1] counts solutions that do include a 1 (remove the 1)
     }
-    f(i,2,k+1) {
-        fr(j,t,0){
-            arr[j].clear();
-            f(a,0,j) {
-                for (short b:arr[a]) {
-                    if (j-a >= b) arr[j].pb(j-a);
-                }
-            }
-        }
-    }
-    cout << arr[t].size() << endl;
+
+    cout << dp[mn][mk] << "\n";
+
     return 0;
 }
