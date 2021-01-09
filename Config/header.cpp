@@ -23,6 +23,7 @@ typedef vector<ll> vll;
 typedef priority_queue<int> pqi;
 const int MOD = 1e9+7, INF = 0x3f3f3f3f, MAXN = 1e5+5; 
 
+// another template matrix: DMOJ/inaho9.cpp
 struct Matrix {
     vector<vll> e;  // elements
     int s;          // size
