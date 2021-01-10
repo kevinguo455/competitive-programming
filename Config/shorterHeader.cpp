@@ -13,15 +13,13 @@ using namespace std;
 #define vr(v) reverse(v.begin(), v.end())
 #define fi first
 #define se second
-#define fio cin.tie(0)->sync_with_stdio(0)
-typedef unsigned int ui;
 typedef long long ll;
 typedef unsigned long long ull;
 typedef pair<int, int> pii;
 const int MOD = 1e9+7, INF = 0x3f3f3f3f, MAXN = 1e5+5; 
 
 int main() {
-    fio;
+    cin.tie(0)->sync_with_stdio(0);
 
     return 0;
 }
