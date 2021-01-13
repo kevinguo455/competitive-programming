@@ -1,6 +1,6 @@
 /*
 CCC '03 S3 - Floor Plan
-Key Concepts: Graph Theory (BFS/DFS, Components)
+Key Concepts: Graph Theory (Grid, BFS/DFS, Components)
 https://dmoj.ca/problem/ccc03s3
 Solution by Kevin Guo
 */
