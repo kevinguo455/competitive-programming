@@ -17,10 +17,18 @@ Unfinished problems: <br/>
 -https://dmoj.ca/problem/seed5 (graphs) <br/>
 -https://dmoj.ca/problem/ecoo13r3p4 (dp) <br/>
 -https://dmoj.ca/problem/virtuoso (dp) <br/>
+-https://dmoj.ca/problem/coci14c1p6 (graphs) <br/>
+-https://dmoj.ca/problem/ccc18s4 (dp) <br/>
+-https://dmoj.ca/problem/ccc05s5 (binary indexed tree) <br/>
+-https://dmoj.ca/problem/dmpg17g1 (knapsack) <br/>
+-https://dmoj.ca/problem/dmopc14c4p5 (data structures) <br/>
 
+LCA: <br/>
+-https://dmoj.ca/problem/fastlca <br/>
 
-
-
+Path Length DP: <br/>
+-https://dmoj.ca/problem/graph1p1 <br/>
+-https://dmoj.ca/problem/dpr <br/>
 
 
 
