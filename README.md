@@ -7,7 +7,6 @@ These solutions are hastily written; speed of implementation was prioritized ove
 
 Unfinished problems: <br/>
 -https://dmoj.ca/problem/hci16redstone (cycle detection) <br/>
--https://dmoj.ca/problem/bts18p6 (math) <br/>
 -https://dmoj.ca/problem/favnumber (data structures) <br/>
 -https://dmoj.ca/problem/dmopc20c2p3 (topological sort) <br/>
 -https://dmoj.ca/problem/coci10c1p4 (greedy algs) <br/>
