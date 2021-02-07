@@ -1,7 +1,7 @@
 /*
-Bulgarian OI '09 P2 - Boxen
-Key Concepts: Graph Theory (components)
-https://dmoj.ca/problem/bgoi09p2
+The Cosmic Era (Seed) P1 - Ship
+Key Concepts: Implementation
+https://dmoj.ca/problem/seed1
 Solution by Kevin Guo
 */
 #include <bits/stdc++.h>
@@ -27,28 +27,27 @@ typedef vector<ll> vll;
 typedef priority_queue<int> pqi;
 const int MOD = 1e9+7, INF = 0x3f3f3f3f, MAXN = 1e5+5; 
 
-int adj[MAXN];
-short vis[MAXN];
-int ans;
-
-void dfs(int n) {
-    vis[n] = 1;
-    if (vis[adj[n]] == 1) ans++;    // count loopbacks
-    if (vis[adj[n]] == 0) dfs(adj[n]);
-    vis[n] = 2;
-}
-
 int main() {
     fio;
 
-    f(cases,0,2){
-        int n; cin >> n;
-        ms(vis,0);
-        ans = 0;
-        f(i,1,n+1) cin >> adj[i];
-        f(i,1,n+1) if (vis[i] == 0) dfs(i);
-        cout << ans << " ";
+    string s; cin >> s;
+    bool b = 0, f = 0, t = 0, l = 0, c = 0;
+    f(i,0,(int)s.length()) {
+        if (s[i] == 'B') b = 1;
+        else if (s[i] == 'F') f = 1;
+        else if (s[i] == 'T') t = 1;
+        else if (s[i] == 'L') l = 1;
+        else if (s[i] == 'C') c = 1;
     }
+    if (b && f && t && l && c) {
+        cout << "NO MISSING PARTS\n";
+        return 0;
+    }
+    if (!b) cout << "B";
+    if (!f) cout << "F";
+    if (!t) cout << "T";
+    if (!l) cout << "L";
+    if (!c) cout << "C";
     cout << "\n";
 
     return 0;

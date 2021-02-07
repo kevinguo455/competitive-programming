@@ -1,7 +1,7 @@
 /*
-Bulgarian OI '09 P2 - Boxen
-Key Concepts: Graph Theory (components)
-https://dmoj.ca/problem/bgoi09p2
+The Cosmic Era (Seed) P4 - Freedom Appears!
+Key Concepts: Geometry
+https://dmoj.ca/problem/seed4
 Solution by Kevin Guo
 */
 #include <bits/stdc++.h>
@@ -25,31 +25,17 @@ typedef pair<ll, ll> pll;
 typedef vector<int> vi;
 typedef vector<ll> vll;
 typedef priority_queue<int> pqi;
-const int MOD = 1e9+7, INF = 0x3f3f3f3f, MAXN = 1e5+5; 
+const int MOD = 1e9+7, INF = 0x3f3f3f3f, MAXN = 360*360*360 + 3; 
 
-int adj[MAXN];
-short vis[MAXN];
-int ans;
-
-void dfs(int n) {
-    vis[n] = 1;
-    if (vis[adj[n]] == 1) ans++;    // count loopbacks
-    if (vis[adj[n]] == 0) dfs(adj[n]);
-    vis[n] = 2;
-}
+bitset<MAXN> b;
 
 int main() {
     fio;
 
-    f(cases,0,2){
-        int n; cin >> n;
-        ms(vis,0);
-        ans = 0;
-        f(i,1,n+1) cin >> adj[i];
-        f(i,1,n+1) if (vis[i] == 0) dfs(i);
-        cout << ans << " ";
+    ll x, y, z, n, a, b, c; cin >> x >> y >> z >> n;
+    f(i,0,n){
+        cin >> a >> b >> c;
     }
-    cout << "\n";
 
     return 0;
 }

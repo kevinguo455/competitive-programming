@@ -1,7 +1,7 @@
 /*
-Bulgarian OI '09 P2 - Boxen
-Key Concepts: Graph Theory (components)
-https://dmoj.ca/problem/bgoi09p2
+The Cosmic Era (Seed) P3 - Battle Positions
+Key Concepts: Data Structures (Difference Array)
+https://dmoj.ca/problem/seed3
 Solution by Kevin Guo
 */
 #include <bits/stdc++.h>
@@ -27,29 +27,29 @@ typedef vector<ll> vll;
 typedef priority_queue<int> pqi;
 const int MOD = 1e9+7, INF = 0x3f3f3f3f, MAXN = 1e5+5; 
 
-int adj[MAXN];
-short vis[MAXN];
-int ans;
-
-void dfs(int n) {
-    vis[n] = 1;
-    if (vis[adj[n]] == 1) ans++;    // count loopbacks
-    if (vis[adj[n]] == 0) dfs(adj[n]);
-    vis[n] = 2;
-}
+int d[MAXN];
 
 int main() {
     fio;
 
-    f(cases,0,2){
-        int n; cin >> n;
-        ms(vis,0);
-        ans = 0;
-        f(i,1,n+1) cin >> adj[i];
-        f(i,1,n+1) if (vis[i] == 0) dfs(i);
-        cout << ans << " ";
+    int n, m, q; cin >> n >> m >> q;
+    
+    // init difference array
+    int l, r, a;
+    f(i,0,q){
+        cin >> l >> r >> a;
+        d[l] += a;
+        d[r+1] -= a;
     }
-    cout << "\n";
+
+    // eval difference array
+    int c = 0;
+    f(i,0,n){
+        if (d[i] < m) c++;
+        d[i+1] += d[i];
+    }
+
+    cout << c << "\n";
 
     return 0;
 }

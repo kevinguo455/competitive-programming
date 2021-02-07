@@ -1,7 +1,7 @@
 /*
-Bulgarian OI '09 P2 - Boxen
-Key Concepts: Graph Theory (components)
-https://dmoj.ca/problem/bgoi09p2
+The Cosmic Era (Seed) P2 - Uneven Sand
+Key Concepts: Binary Search
+https://dmoj.ca/problem/seed2
 Solution by Kevin Guo
 */
 #include <bits/stdc++.h>
@@ -27,29 +27,20 @@ typedef vector<ll> vll;
 typedef priority_queue<int> pqi;
 const int MOD = 1e9+7, INF = 0x3f3f3f3f, MAXN = 1e5+5; 
 
-int adj[MAXN];
-short vis[MAXN];
-int ans;
-
-void dfs(int n) {
-    vis[n] = 1;
-    if (vis[adj[n]] == 1) ans++;    // count loopbacks
-    if (vis[adj[n]] == 0) dfs(adj[n]);
-    vis[n] = 2;
-}
-
 int main() {
     fio;
 
-    f(cases,0,2){
-        int n; cin >> n;
-        ms(vis,0);
-        ans = 0;
-        f(i,1,n+1) cin >> adj[i];
-        f(i,1,n+1) if (vis[i] == 0) dfs(i);
-        cout << ans << " ";
+    ll l = 1, r = 2e9, m;
+    string s;
+    while (true) {
+        m = (l + r) / 2;                    // implement binary search
+        cout << m << "\n";                  // guess
+        cout.flush();
+        cin >> s;
+        if (s == "OK") return 0;            // done
+        else if (s == "SINKS") l = m + 1;   // too low
+        else if (s == "FLOATS") r = m - 1;  // too high
     }
-    cout << "\n";
 
     return 0;
 }
