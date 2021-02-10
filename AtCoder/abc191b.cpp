@@ -1,7 +1,7 @@
 /*
-
-Key Concepts: 
-https://dmoj.ca/problem/
+AtCoder Beginner Contest 191 Problem B - Remove It  
+Key Concepts: Implementation
+https://atcoder.jp/contests/abc191/tasks/abc191_b
 Solution by Kevin Guo
 */
 #include <bits/stdc++.h>

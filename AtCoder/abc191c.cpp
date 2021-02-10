@@ -1,7 +1,7 @@
 /*
-
-Key Concepts: 
-https://dmoj.ca/problem/
+AtCoder Beginner Contest 191 Problem C - Digital Graffiti 
+Key Concepts: Implementation
+https://atcoder.jp/contests/abc191/tasks/abc191_c
 Solution by Kevin Guo
 */
 #include <bits/stdc++.h>
@@ -35,7 +35,6 @@ pii travel(pii c, int d) {
 }
 
 void scan(pii c, int d) {
-    //cout << c.fi << ' ' << c.se << '\n';
     pii l = travel(c, mod(d-1));
     if (filled(l)) {
         ans++;
@@ -56,7 +55,6 @@ void scan(pii c, int d) {
         scan(r, mod(d+1));
         return;
     }
-    //pii b = travel(c, mod(d+2));
     ans++;
     if (c.fi == s.fi && c.se == s.se && ans > 1 && mod(d+2) == 0) return;
     scan(c, mod(d+2));
@@ -86,12 +84,3 @@ int main() {
 
     return 0;
 }
-
-/*
-5 5
-....#
-....#
-#...#
-#.#.#
-#####
-*/
