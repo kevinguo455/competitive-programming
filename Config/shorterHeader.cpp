@@ -5,7 +5,9 @@ https://dmoj.ca/problem/
 Solution by Kevin Guo
 */
 #include <bits/stdc++.h>
+#include <ext/pb_ds/assoc_container.hpp>
 using namespace std;
+using namespace __gnu_pbds;
 
 #define ms(x,a) memset(x,a,sizeof(x))
 #define pb push_back
