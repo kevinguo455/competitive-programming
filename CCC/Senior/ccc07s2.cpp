@@ -48,6 +48,4 @@ int main() {
         if (minv == INF) cout << "Item does not fit.\n";
         else cout << minv << '\n';
     }
-
-    return 0;
 }
