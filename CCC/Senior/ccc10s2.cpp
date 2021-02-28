@@ -1,26 +1,33 @@
-// https://dmoj.ca/problem/ccc10s2
+/*
+CCC '10 S2 - Huffman Encoding
+Key Concepts: Implementation
+https://dmoj.ca/problem/ccc10s2
+Solution by Kevin Guo
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-    int n; cin >> n;
+    cin.tie(0)->sync_with_stdio(0);
+
+    int N; cin >> N;
     map<string, char> m;
-    for (int i = 0; i < n; i++) {
-        char c;
-        string s;
+    char c; string s;
+    while (N--) {
         cin >> c >> s;
-        m.insert(make_pair(s,c));
+        m[s] = c;
     }
-    string str; cin >> str;
-    string s = "";
-    for (int i = 0; i < (int) str.length(); i++) {
-        s.append(str, i, 1);
-        map<string, char>::iterator it = m.find(s);
-        if (it != m.end()) {
-            cout << it->second;
-            s = "";
+    cin >> s;
+    string l = "";
+    for (int i = 0; i < s.length(); i++) {
+        l += s[i];
+        if (m[l]) {
+            cout << m[l];
+            l = "";
         }
     }
-    cout << endl;
+    cout << '\n';
+
+
     return 0;
 }

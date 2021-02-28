@@ -1,30 +1,30 @@
-// https://dmoj.ca/problem/ccc15s1
-#include <iostream>
-#include <vector>
+/*
+CCC '15 S1 - Zero That Out
+Key Concepts: Implementation
+https://dmoj.ca/problem/ccc15s1
+Solution by Kevin Guo
+*/
+#include <bits/stdc++.h>
+using namespace std;
 
 int main() {
-	int n;
-	std::cin >> n;
+    cin.tie(0)->sync_with_stdio(0);
 
-	std::vector<int> x(n, 0);
-	int i = 0;
-	while (n > 0) {
-		std::cin >> x[i];
-		if (x[i] == 0 && i != 0) {
-			i--;
-			x[i] = 0;
-		}
-		else {
-			i++;
-		}
-		n--;
-	}
+    int N; cin >> N;
+    stack<int> q;
+    while (N--) {
+        int x; cin >> x;
+        if (x == 0) q.pop();
+        else q.push(x);
+    }
 
-	int sum = 0;
-	for (int j = 0; j < i; j++) {
-		sum += x[j];
-	}
+    int ans = 0;
+    while (!q.empty()) {
+        ans += q.top();
+        q.pop();
+    }
 
-	std::cout << sum;
+    cout << ans << '\n';
+
     return 0;
 }

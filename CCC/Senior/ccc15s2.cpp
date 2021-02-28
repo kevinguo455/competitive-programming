@@ -7,37 +7,33 @@ Solution by Kevin Guo
 #include <bits/stdc++.h>
 using namespace std;
 
-const int MAXN = 1e6+2;
+const int MAXN = 1e6+5; 
 
-short arr[MAXN];
-
-short size(char c) {
-    if (c == 'S') return 1;         // 1 = small
-    else if (c == 'M') return 2;    // 2 = medium
-    else return 3;                  // 3 = large
-}
+map<char, int> m;
+int arr[MAXN];
 
 int main() {
-    cin.tie(0); cout.tie(0); ios::sync_with_stdio(0);
+    cin.tie(0)->sync_with_stdio(0);
 
-    int j, a; cin >> j >> a;
+    m['S'] = 1;
+    m['M'] = 2;
+    m['L'] = 3;
+
+    int N, M; cin >> N >> M;
     char c;
-    for (int i = 1; i <= j; i++) {
-        cin >> c;                  
-        arr[i] = size(c);           // store size of ith jersey
+    for (int i = 1; i <= N; i++) {
+        cin >> c;
+        arr[i] = m[c];
     }
-
-    int ans = 0;
-    
-    for (int i = 0; i < a; i++) {
-        cin >> c >> j;
-        if (size(c) <= arr[j]) {    // if jth jersey fits, assign it
-            arr[j] = -1;            // -1 = taken
+    int x, ans = 0;
+    while (M--) {
+        cin >> c >> x;
+        if (arr[x] >= m[c]) {
+            arr[x] = -1;
             ans++;
         }
     }
-
-    cout << ans << "\n";
+    cout << ans << '\n';
 
     return 0;
 }
