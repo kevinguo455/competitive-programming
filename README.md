@@ -19,9 +19,11 @@ Graphs:
 
 -https://dmoj.ca/problem/coci14c1p6 (graphs) <br/>
 
+Data Structures: <br/>
 -https://dmoj.ca/problem/ccc05s5 (binary indexed tree) <br/>
 -https://dmoj.ca/problem/dmpg17g1 (knapsack) <br/>
--https://dmoj.ca/problem/dmopc14c4p5 (data structures) <br/>
+-https://dmoj.ca/problem/dmopc14c4p5 (segment tree) <br/>
+-https://dmoj.ca/problem/mnyc17p6 (segment tree) <br/>
 
 LCA: <br/>
 -https://dmoj.ca/problem/fastlca <br/>
@@ -31,7 +33,6 @@ Dynamic Programming:
 -https://dmoj.ca/problem/ecoo13r3p4 (dp) <br/>
 -https://dmoj.ca/problem/virtuoso (dp) <br/>
 -https://dmoj.ca/problem/ccc18s4 (dp) <br/>
--https://dmoj.ca/problem/halfgrid (grid dp) <br/>  Also AtCoder Grid DP
 
 
 
