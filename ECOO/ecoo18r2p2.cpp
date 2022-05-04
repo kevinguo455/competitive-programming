@@ -7,8 +7,6 @@ Solution by Kevin Guo
 #include <bits/stdc++.h>
 using namespace std;
 
-const int MAXN = 1e5+5; 
-
 struct Event {
     int t;
     double w;
@@ -23,7 +21,7 @@ int main() {
     cin.tie(0)->sync_with_stdio(0);
     cout << fixed << setprecision(4);
 
-    for (int cases = 0; cases < 2; cases++) {
+    for (int cases = 0; cases < 10; cases++) {
         int N; cin >> N;
         v.clear();
         v.resize(N);
