@@ -10,6 +10,18 @@ using namespace std;
 struct Point{int x, y;};
 struct Line{Point a, b;};
 
+double triangleArea(Point a, Point b, Point c) { // (AB X AC) / 2
+    return ((b.x-a.x)*(c.y-b.y) - (c.x-a.x)*(b.y-a.y))/2.0;
+}
+
+int dot(Line v, Line u) {
+    return (v.b.x-v.a.x)*(u.b.x-u.a.x) + (u.b.y-u.a.y)*(v.b.y-v.a.y);
+}
+
+int cross(Line v, Line u) {
+    return (v.b.x-v.a.x)*(u.b.y-u.a.y) - (u.b.x-u.a.x)*(v.b.y-v.a.y);
+}
+
 int orient(Point a, Point b, Point c) {
     int res = (b.y-a.y)*(c.x-b.x) - (c.y-b.y)*(b.x-a.x);
     if (res == 0) return res;   // 0 = collinear 
@@ -33,6 +45,12 @@ bool intersect(Line u, Line v) {    // touching = intersecting
 }
 
 int main() {
+    while (1) {
+        Point a, b, c; cin >> a.x >> a.y >> b.x >> b.y >> c.x >> c.y;
+        cout << triangleArea(a, b, c) << '\n' << flush;
+        //Line v, u; cin >> v.a.x >> v.a.y >> v.b.x >> v.b.y >> u.a.x >> u.a.y >> u.b.x >> u.b.y;
+        //cout << dot(v, u) << '\n' << flush;
+    }
     cin.tie(0)->sync_with_stdio(0);
 
     Line L; cin >> L.a.x >> L.a.y >> L.b.x >> L.b.y;

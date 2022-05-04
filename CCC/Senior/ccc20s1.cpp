@@ -1,49 +1,35 @@
-// https://dmoj.ca/problem/ccc20s1
-//#include <iostream>
-//#include <math.h>
-//#include <vector>
-//#include <algorithm>
-#include <bits/stdc++.h> 
-//#include <utility>
-//#include <cstdio>
-//#include <tuple>
+/*
+CCC '20 S1 - Surmising a Sprinter's Speed
+Key Concepts: Implementation, Simple Math
+https://dmoj.ca/problem/ccc20s1
+*/
 
-double abso(double n) {
-    if (n < 0) {
-        n = 0-n;
-    }
-    return n;
+#include <bits/stdc++.h>
+using namespace std;
+
+const int MAXN = 1e5+5;
+
+struct Pair{int t, p;} arr[MAXN];
+
+bool cmp(Pair a, Pair b) {
+    return a.t < b.t;
 }
 
 int main() {
-    int pairs;
-    double a, b;
-    double da, db;
-    double spd, maxspd;
-    std::cin >> pairs;
+    cin.tie(0)->sync_with_stdio(0);
 
-    std::vector<std::pair<double, double> > locations;
-
-    for (int i = 0; i < pairs; i++) {
-        std::cin >> a >> b;
-        locations.push_back(std::make_pair(a, b));
-    } 
-    std::sort(locations.rbegin(), locations.rend());
-
-    da = std::get<0>(locations[0])-std::get<0>(locations[1]);
-    db = std::get<1>(locations[0])-std::get<1>(locations[1]);
-    maxspd = (double)abso(db/da);
-    
-    for (int i = 2; i < pairs; i++) {
-        da = std::get<0>(locations[i-1])-std::get<0>(locations[i]);
-        db = std::get<1>(locations[i-1])-std::get<1>(locations[i]);
-        spd = (double)abso(db/da);
-        if (spd > maxspd) {
-            maxspd = spd;
-        }
+    int N; cin >> N;
+    for (int i = 0; i < N; i++) {
+        cin >> arr[i].t >> arr[i].p;
     }
 
-    std::cout << std::fixed << std::setprecision(6) << maxspd << std::endl;
+    sort(arr, arr+N, cmp);
+
+    double ans = -1e11;
+    for (int i = 1; i < N; i++) {
+        ans = max(ans, abs(((double)arr[i].p-arr[i-1].p) / ((double)arr[i].t-arr[i-1].t)));
+    }
+    cout << ans << '\n';
 
     return 0;
 }
