@@ -1,7 +1,7 @@
 /*
 Bruce's Homework
 Key Concepts: Dynamic Programming (0-1 Knapsack)
-https://dmoj.ca/problem/0lyhwk
+https://dmoj.ca/problem/olyhwk
 Solution by Kevin Guo
 */
 #include <bits/stdc++.h>

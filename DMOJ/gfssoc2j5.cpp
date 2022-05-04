@@ -1,5 +1,5 @@
 /*
-Nightmare-a-thon
+Glenforest Spring Open '15 Junior 5 - Nightmare-a-thon
 Key Concepts: Data Structures (highly modified prefix sum array)
 https://dmoj.ca/problem/gfssoc2j5
 Solution by Kevin Guo
