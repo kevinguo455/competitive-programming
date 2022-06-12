@@ -21,7 +21,7 @@ public:
 
         queue<pair<int, int>> q;
         if (!grid[0][0]) q.push({0, 0});
-        
+
         memset(vis, 0, sizeof(vis));
         vis[0][0] = 1;
         int end = grid.size()-1;
